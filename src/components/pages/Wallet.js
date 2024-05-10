@@ -19,6 +19,7 @@ import setAuthToken from "../../utils/setAuthToken"
 import WalletUtil from "../../utils/wallet"
 import openNotification from "../helpers/notification";
 import WalletLoadingModal from "../component/WalletComponents/WalletLoadingModal";
+import ExternalWallet from '../views/ExternalWallet';
 import {SERVER_URL, networks} from "../../constants/env";
 import {getTokenBaseInfo, getTokenBalance, getTokenPriceInUsd} from "../../utils/tokenUtils";
 
@@ -274,6 +275,9 @@ const getEthPrice=async ()=>{
                     <WalletManageKeys network={network}/>
                   :idx===5?
                     <WalletProfile />
+                  :idx===6?
+                    <ExternalWallet />
+
                   :null
                 }
               </Row>
