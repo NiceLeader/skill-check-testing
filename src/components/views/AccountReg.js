@@ -90,11 +90,11 @@ function AccountReg(props) {
       window.location.href="/walletMain";
   }
   function hasErrors(fieldsError) {
-    console.log("errer",fieldsError[0].errors.length)
+    console.log("error",fieldsError[0].errors.length)
     if(fieldsError[0].errors.length>0)
       return false;
     verifyEmail();
-  // return Object.keys(fieldsError).some(field => fieldsError[field]);
+  return Object.keys(fieldsError).some(field => fieldsError[field]);
 }
   return (
       <RegCard className={props.className} cardClassName='w-full h-full rounded-none flex flex-col flex-wrap justify-center items-center'>

@@ -51,6 +51,16 @@ npm run dev
 - Included a "Wallet Interface" button within the "Outside Wallet" menu to empower association on the off chance that Metamask is introduced.
 - Given a detach usefulness that resets the wallet address state variable. In spite of the fact that it doesn't completely disengage as Metamask remains dynamic.
 
+### Database Design Recommendations:
+
+- **Table Naming Conventions**: Use plural names for tables to indicate they contain multiple records (e.g., `users`, `transactions`).
+- **Consistency in Field Naming**: Apply consistent naming conventions for all fields across tables.
+- **Primary Key Naming**: Use a consistent format for primary keys across all tables.
+- **Data Normalization**: Reduce redundancy and improve data integrity through normalization.
+- **Indexing**: Ensure that all foreign keys and frequently queried fields are indexed to improve query performance.
+- **Use of ENUMs**: Evaluate the use of ENUM type fields and consider replacing them with references to lookup tables if the list of values changes frequently.
+- **Security Considerations**: Encrypt or hash sensitive data, particularly passwords and personal identifying information.
+
 ### Perceptions and Potential Changes:
 
 
